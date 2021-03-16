@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.mapper.WxUserInfoMapper">
+
+    <!-- 开启二级缓存 -->
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.shop.entity.WxUserInfo">
+    <result column="id" property="id" />
+        <result column="corpid" property="corpid" />
+        <result column="userid" property="userid" />
+        <result column="openid" property="openid" />
+        <result column="third_session_key" property="thirdSessionKey" />
+        <result column="unionid" property="unionid" />
+        <result column="name" property="name" />
+        <result column="deviceid" property="deviceid" />
+        <result column="user_ticket" property="userTicket" />
+        <result column="source" property="source" />
+        <result column="is_bind_mobile" property="isBindMobile" />
+        <result column="mobile" property="mobile" />
+        <result column="account_id" property="accountId" />
+        <result column="account" property="account" />
+        <result column="login_number" property="loginNumber" />
+        <result column="login_time" property="loginTime" />
+        <result column="status" property="status" />
+        <result column="create_time" property="createTime" />
+        <result column="is_admin" property="isAdmin" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id,
+        corpid, userid, openid, third_session_key, unionid, name, deviceid, user_ticket, source, is_bind_mobile, mobile, account_id, account, login_number, login_time, status, create_time, is_admin
+    </sql>
+</mapper>
